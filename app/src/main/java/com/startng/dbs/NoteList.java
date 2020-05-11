@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 
+import com.startng.newsapp.R;
+
 import java.util.ArrayList;
 
 public class NoteList extends ArrayAdapter<Note> {
@@ -26,12 +28,12 @@ public class NoteList extends ArrayAdapter<Note> {
 
     public NoteList(@NonNull Context context, @NonNull ArrayList<Note> objects, boolean viewMode) {
         super(context,
-                R.layout.lists,
+                R.layout.note_card_fragment,
                 objects
         );
         this.context = context;
         this.data = objects;
-        this.layoutResourceId = viewMode? R.layout.list_view: R.layout.lists;
+        this.layoutResourceId = R.layout.note_card_fragment;
         this.viewMode = viewMode;
     }
 
@@ -45,12 +47,12 @@ public class NoteList extends ArrayAdapter<Note> {
             LayoutInflater inflater = ((Activity)this.getContext()).getLayoutInflater();
             row = inflater.inflate(this.layoutResourceId,parent, false);
             holder = new ViewHolder();
-            holder.id = (TextView)row.findViewById(R.id.item_id);
-            holder.price = (TextView)row.findViewById(R.id.item_price);
-            holder.title = (TextView)row.findViewById(R.id.item_title);
+            holder.id = (TextView)row.findViewById(R.id.note_id);
+            holder.body = (TextView)row.findViewById(R.id.note_body);
+            holder.created_at = (TextView)row.findViewById(R.id.date);
             row.setTag(holder);
             if (viewMode){
-                holder.deleteBtn =   (Button)  row.findViewById(R.id.button);
+             //   holder.deleteBtn =   (Button)  row.findViewById(R.id.button);
             }
         }
         else
@@ -62,19 +64,17 @@ public class NoteList extends ArrayAdapter<Note> {
 
         Note item = data.get(position);
 
-        holder.id.setText(String.valueOf(item.item__id));
-        holder.price.setText(item.item_price);
-        holder.title.setText(item.item_title);
-
+        holder.id.setText(String.valueOf(item.note__id));
+        holder.body.setText(item.note_body);
+        holder.created_at.setText(item.note_created_at.toString());
         return row;
     }
 
     static class ViewHolder
     {
         TextView id;
-        TextView price;
-        TextView title;
-        Button deleteBtn;
+        TextView body;
+        TextView created_at;
     }
 }
 

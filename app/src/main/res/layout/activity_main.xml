@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -17,11 +17,10 @@
         android:background="@color/colorPrimary"
         android:textColor="#FFF"
         android:textAlignment="center"
-        android:text="TextView"
+        android:text="Notes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
@@ -31,25 +30,22 @@
         android:layout_marginEnd="16dp"
         android:textSize="24sp"
         android:textAlignment="center"
-        android:text="TextView"
+        android:text="New Note"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
+        app:layout_constraintTop_toBottomOf="@+id/date" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="600dp"
         android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        <!--Text view to describe scrollView children-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="mdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsdmdnbsmcbch ckjdlcsgsd sdjklsdgj dcjbksdbsd cdbkhdblhe dbhjfksl dssdhjdbsfghj sdsdbjhskdlshd dsbjlsd dhkmsdlm dhsbjlsd silsdh dslsd"/>
+        app:layout_constraintTop_toBottomOf="@+id/date">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

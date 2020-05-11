@@ -12,17 +12,17 @@ public class NoteDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + NoteContract.ShoppingEntry.TABLE + " ( " +
-                NoteContract.ShoppingEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                NoteContract.ShoppingEntry.COL_NOTE_BODY + " DECIMAL(12,2) NOT NULL, " +
-                NoteContract.ShoppingEntry.COL_NOTE_CREATED + " TEXT NOT NULL);";
+        String createTable = "CREATE TABLE " + NoteContract.NoteEntry.TABLE + " ( " +
+                NoteContract.NoteEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                NoteContract.NoteEntry.COL_NOTE_BODY + " DECIMAL(12,2) NOT NULL, " +
+                NoteContract.NoteEntry.COL_NOTE_CREATED + " DATETIME DEFAULT CURRENT_TIMESTAMP);";
 
         db.execSQL(createTable);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + NoteContract.ShoppingEntry.TABLE);
+        db.execSQL("DROP TABLE IF EXISTS " + NoteContract.NoteEntry.TABLE);
         onCreate(db);
     }
 }

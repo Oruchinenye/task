@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NoteCardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="5dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="10dp"
+        app:contentPadding="6dp"
+        android:layout_height="100dp" >
+        <TextView
+            android:id="@+id/note_id"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/date"
+            android:text="" />
+        <TextView
+            android:layout_width="match_parent"
+            android:minHeight="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/note_body" />
+        <LinearLayout
+            android:layout_marginTop="70dp"
+            app:layout_constraintTop_toBottomOf="@+id/note_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dp"
+                android:height="20dp"
+                android:id="@+id/editBtn"
+                android:background="@color/colorPrimary"
+                android:text="edit"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="14dp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="20dp"
+                android:id="@+id/deleteBtn"
+                android:background="@color/colorAccent"
+                android:text="X"
+                android:onClick="deleteNote"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

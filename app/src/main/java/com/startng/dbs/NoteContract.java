@@ -6,7 +6,7 @@ public class NoteContract {
     public static final String DB_NAME = "com.example.shoppinglist.db";
     public static final int DB_VERSION = 1;
 
-    public class ShoppingEntry implements BaseColumns {
+    public class NoteEntry implements BaseColumns {
         public static final String TABLE = "shopping";
 
         public static final String COL_NOTE_ID = "_id";

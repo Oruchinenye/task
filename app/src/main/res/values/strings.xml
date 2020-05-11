@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="save">save</string>
+    <string name="submit">create</string>
+    <string name="update_note">Update Note</string>
+    <string name="update">Update</string>
     <string-array name="sports_info">
         <item>Nike Enters 10-Year </item>
         <item>Indonesia Masters – Saina</item>
