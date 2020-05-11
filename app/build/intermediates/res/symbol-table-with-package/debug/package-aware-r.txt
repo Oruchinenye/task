@@ -1097,6 +1097,7 @@ id direct
 id disableHome
 id editBtn
 id editText
+id editText2
 id edit_query
 id end
 id end_padder
@@ -1296,6 +1297,7 @@ layout activity_create_note
 layout activity_edit_note2
 layout activity_headlines
 layout activity_main
+layout addnote
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
